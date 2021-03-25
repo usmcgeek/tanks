@@ -1,0 +1,147 @@
+############################################################## Localization
+
+include file: language
+
+#############################################################Default matching
+	numbers_only := filter_rule(match: "[*+0-9-]")
+	#symbols_only := filter_rule(match: "[?dDsSbBfFHKRwc]")
+	#sites_only := filter_text(match: "[DSBFHKR]", input: value)
+
+######################Classic vs Modern Identification	
+
+	is_modern := { contains(card.background, match: "Modern") }
+	is_small := { contains(card.background, match: "Small") }
+	is_crit := { contains(card.background, match: "Crit") }
+
+###########################################################Nation Icons Selection
+nation_icon := {
+	if card.nation == "Britain" then "britain.png"
+	else if card.nation =="Germany" then "germany.png"
+	else if card.nation =="Japan" then "japan.png"
+	else if card.nation =="Soviet" then "soviet.png"
+	else if card.nation =="ModernAmerica" then "modern_america.png"
+	else if card.nation =="France" then "france.png"
+	else if card.nation =="ModernGermany" then "modern_west_germany.png"
+	else if card.nation =="General" then "general.png"
+	else if card.nation =="AmericaBritain" then "america_britain.png"
+	else if card.nation =="Australia" then "australia.png"
+	else if card.nation =="Belgium" then "belgium.png"
+	else if card.nation =="Bulgaria" then "bulgaria.png"
+	else if card.nation =="Canada" then "canada.png"
+	else if card.nation =="Modern Canada" then "modern_canada.png"
+	else if card.nation =="Czechoslovakia" then "czech.png"
+	else if card.nation =="Denmark" then "denmark.png"
+	else if card.nation =="Finland" then "finland.png"
+	else if card.nation =="Greece" then "greece.png"
+	else if card.nation =="Hungary" then "hungary.png"
+	else if card.nation =="India" then "india.png"
+	else if card.nation =="Italy" then "italy.png"
+	else if card.nation =="Modern China" then "modern_china.png"
+	else if card.nation =="Nationalist China" then "nationalistchina.png"
+	else if card.nation =="Netherlands" then "netherlands.png"
+	else if card.nation =="New Zealand" then "newzealand.png"
+	else if card.nation =="Norway" then "norway.png"
+	else if card.nation =="Phillipines" then "phillipines.png"
+	else if card.nation =="Poland" then "poland.png"
+	else if card.nation =="Romania" then "romania.png"
+	else if card.nation =="South Africa" then "southafrica.png"
+	else if card.nation =="Yugoslavia" then "yugoslavia.png"
+	else "america.png"
+
+	}
+
+
+###########################################################Small Card Icons Selection
+smallcard_icon := {
+	if card.smalltype == "Armor" then "armor_icon.png"
+	else if card.smalltype =="Commander" then "commander_icon.png"
+	else if card.smalltype =="Crewman" then "crewman_icon.png"
+	else if card.smalltype =="Doctrine" then "doctrine_icon.png"
+	else if card.smalltype =="Driver" then "driver_icon.png"
+	else if card.smalltype =="Engine" then "engine_icon.png"
+	else if card.smalltype =="Equipment" then "equipment_icon.png"
+	else if card.smalltype =="Gunner" then "gunner_icon.png"
+	else if card.smalltype =="Loader" then "loader_icon.png"
+	else if card.smalltype =="Radio" then "radio_icon.png"
+	else "ammo_icon.png"
+
+	}
+
+hero_icon := {
+	if card.hero == "Hero" then "hero_icon.png"
+	else "hero_blank.png"
+	}
+
+###########################################################HP Boxes
+hp_icon := {
+	if card.hp == "2" then "2hp.png"
+	else if card.hp =="3" then "3hp.png"
+	else if card.hp =="4" then "4hp.png"
+	else if card.hp =="5" then "5hp.png"
+	else if card.hp =="6" then "6hp.png"
+	else if card.hp =="7" then "7hp.png"
+	else if card.hp =="8" then "8hp.png"
+	else if card.hp =="9" then "9hp.png"
+	else if card.hp =="10" then "10hp.png"
+	else "1hp.png"
+
+	}
+	
+#######################################################################Spell Checking Filters
+text_filter :=
+	#Replace double dash to long dash
+	replace@(
+		match: "--"
+		replace: "—"
+	) +
+
+#################################################
+	# Spellcheck
+	{ if set.mark_errors then
+		check_spelling(
+			language: language().spellcheck_code,
+		)
+	  else input
+	} +
+	curly_quotes
+
+#################################################################
+#### Flavor Text Separator Filter and Checks
+#################################################################
+rules_separator_filter :=
+	#Set Size and Italics
+	{ "<size:6>"+input+"</size>" }
+#################################################################
+#### Flavor Text Filter and Checks
+#################################################################
+flavor_text_filter :=
+	#Replace double dash to long dash
+	replace@(
+		match: "--"
+		replace: { "<b>" + "—" }
+	) +
+	# Spellcheck
+	{ if set.mark_errors then
+		check_spelling(
+			language: language().spellcheck_code,
+		)
+	  else input
+	} +
+	#Set Size and Italics
+	{ "<size:22><i>"+input+"</i></size>" } +
+	curly_quotes
+
+########################################################################
+#### Color Lists
+########################################################################
+white := { rgb(255,255,255) }
+black := { rgb(0,0,0) }
+silver := {rgb(128,128,128)}
+gold := {rgb(200,180,0)}
+blue := {rgb(0,71,124)}
+green := {rgb(15,121,52)}
+darkred := {rgb(153,0,0)}
+darkgreen := {rgb(76,153,0)}
+lightblue := {rgb(0,204,204)}
+purple := {rgb(127,0,255)}
+orange := {rgb(255,128,0)}

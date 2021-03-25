@@ -1,0 +1,52 @@
+mse version: 0.3.8
+version: 2021-03-22
+short name: icons
+position hint: 2
+
+image font size: 300
+horizontal space: 0
+vertical space: 3
+symbol:
+	code: initiative
+	image: initiative.png
+symbol:
+	code: blueinitiative
+	image: initiative_blue.png
+symbol:
+	code: attack
+	image: attack.png
+symbol:
+	code: redattack
+	image: attack_red.png
+symbol:
+	code: armor
+	image: armor.png
+symbol:
+	code: greenarmor
+	image: armor_green.png
+symbol:
+	code: helo
+	image: helo.png
+symbol:
+	code: tank
+	image: tank.png
+symbol:
+	code: ammo
+	image: ammo2.png
+symbol:
+	code: circleammo
+	image: ammocircle.png
+
+##############################################################
+# Insert-symbol menu
+insert symbol menu:
+	item: initiative
+	item: blueinitiative
+	item: attack
+	item: redattack
+	item: armor
+	item: greenarmor
+	item: helo
+	item: tank
+	item: ammo
+	item: circleammo
