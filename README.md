@@ -1,5 +1,10 @@
 # Tanks Skirmish Game Card Editor and Fan Cards
 
+## To Download:
+ * Click on the Green "Code" button in the upper right section of this page.
+ * Choose "Download ZIP" to simply download a copy of all files
+ * Use the "Open with GitHub Desktop" if you have installed it so that you can sync all the files and also get updates.
+
 ## Notes:
  * Note - while this is compatible with normal magicseteditor, you will not get full resolution with the normal one.
    Use the editor here for full resolution support. Regular magicseteditor forces everything down to 150dpi max.
