@@ -18,5 +18,9 @@
  * WW2 and Modern Age Templates
  * Multiple additonal countries
 
-## 23 Mar 2021
+ ## 26 Mar 2021
+ * Updated Templates to fix some items
+ * Added images of all official cards
+ 
+ ## 23 Mar 2021
  * Added Game Templates and Support for TANKS miniatures game cards
