@@ -1,0 +1,13 @@
+Ammo Explosion	-2
+Bailed Out	-3
+Busted Tracks	-2
+Damaged Engine	-2
+Damaged Euipment-2
+Damaged Optics	-3
+Engine Fire	-2
+Injured Crew	-2
+Jammed Turret	-2
+Lucky Hit	-8
+Shell Shocked	-2
+Stunned Crew	-2
+Total Cards	32
