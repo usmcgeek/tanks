@@ -13,6 +13,10 @@ include file: language
 	is_small := { contains(card.background, match: "Small") }
 	is_crit := { contains(card.background, match: "Crit") }
 	is_platoon := { contains(card.background, match: "Platoon") }
+	is_4crew := { contains(card.background, match: "4") }
+	is_2ammo := { contains(card.background, match: "2 Ammo") }
+	is_3ammo := { contains(card.background, match: "3") }
+	is_helo := { contains (card.background, match: "Helo") }
 
 ###########################################################Nation Icons Selection
 nation_icon := {

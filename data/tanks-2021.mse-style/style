@@ -183,6 +183,8 @@ card style:
 		visible: {if is_crit() then "false" else "true" }
 		render style: image
 		image: { nation_icon() }
+#		mask: { if ( is_modern() and is_4crew() ) or if ( is_modern() and is_helo() and is_2ammo() ) then "nation_mask.png" else "nation_blank_mask.png" }
+		mask: { if ( is_modern() and is_4crew() ) then "nation_mask.png" else if ( is_modern() and is_helo() and is_2ammo() ) then "nation_mask.png" else if ( is_modern() and is_helo() and is_3ammo() ) then "nation_mask.png" else "nation_blank_mask.png" }
 		
 # SmallIcon Selectors
 	smalltype:
