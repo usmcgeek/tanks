@@ -159,6 +159,7 @@ card field:
 	choice: Gunner
 	choice: Loader
 	choice: Radio
+	choice: Pilot
 
 card field:
 	type: choice
