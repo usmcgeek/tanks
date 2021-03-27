@@ -12,6 +12,7 @@ include file: language
 	is_modern := { contains(card.background, match: "Modern") }
 	is_small := { contains(card.background, match: "Small") }
 	is_crit := { contains(card.background, match: "Crit") }
+	is_platoon := { contains(card.background, match: "Platoon") }
 
 ###########################################################Nation Icons Selection
 nation_icon := {
@@ -50,6 +51,14 @@ nation_icon := {
 
 	}
 
+	###########################################################Platoon Icons Selection
+platoon_icon := {
+	if card.platoon == "Allies" then "america_britain.png"
+	else if card.platoon =="W-Pact" then "warsawpact.png"
+	else if card.platoon =="Axis" then "germany.png"
+	else "nato.png"
+
+	}
 
 ###########################################################Small Card Icons Selection
 smallcard_icon := {

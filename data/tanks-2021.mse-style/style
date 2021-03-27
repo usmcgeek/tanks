@@ -1,6 +1,6 @@
 mse version: 0.3.8
 game: tanks
-full name: Tanks GF9
+full name: Tanks FAN
 short name: Tanks
 icon: icon.png
 position hint: 001
@@ -83,6 +83,8 @@ card style:
 			Crit Cards WW2 No Repair: critcard.png
 			Crit Cards Mod Repairable: critcard_repair_mod.png
 			Crit Cards Mod No Repair: critcard_mod.png
+			Platoon WW2: platoon_ww2.png
+			Platoon ModernAge: platoon_modern.png
 
 ###########################################################################
 ### Normal Card Title / Name
@@ -108,7 +110,7 @@ card style:
 		width: 54
 		height: 47
 		z index: 1
-		visible: {if is_crit() then "false" else "true" }
+		visible: {if is_crit() then "false" else if is_platoon() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro Cond
@@ -129,6 +131,24 @@ card style:
 			name: tanks-icons
 			size: 34
 			scale down to: 10
+# Platoon Selectors
+	platoon:
+		left: 530
+		top: 64
+		width: 25
+		height: 30
+		z index: 1
+		visible: {if is_platoon() then "true" else "false" }
+
+	platoonicon:
+		left: 515
+		top: 60
+		width: 58
+		height: 57
+		z index: 2
+		visible: {if is_platoon() then "true" else "false" }
+		render style: image
+		image: { platoon_icon() }
 
 	back points:
 		left: 260
@@ -208,7 +228,7 @@ card style:
 		width: 607
 		height: 44
 		z index: 1
-		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else if is_platoon() then "false" else "true" }
 		alignment: middle left shrink-overflow
 		font:
 			name: Myriad Pro Cond
@@ -223,7 +243,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
-		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else if is_platoon() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -238,7 +258,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
-		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else if is_platoon() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -253,7 +273,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
-		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else if is_platoon() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -268,7 +288,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
-		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else if is_platoon() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -284,7 +304,7 @@ card style:
 		width: 50
 		height: 20
 		z index: 1
-		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else if is_platoon() then "false" else "true" }
 
 	hp icon:
 		left: 619
@@ -292,7 +312,7 @@ card style:
 		width: 89
 		height: 184
 		z index: 2
-		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else if is_platoon() then "false" else "true" }
 		render style: image
 		image: { hp_icon() }
 ###########################################################################
@@ -301,9 +321,9 @@ card style:
 
 	text:
 		left: 74
-		top: { if is_modern() then 690 else if is_small() then 133 else if is_crit() then 190 else 695 }
+		top: { if is_platoon() then 450 else if is_modern() then 690 else if is_small() then 133 else if is_crit() then 190 else 695 }
 		width: { if is_small() then 499 else 606 }
-		height: { if is_small() then 327 else if is_crit() then 470 else 275 }
+		height: { if is_small() then 327 else if is_crit() then 470 else if is_platoon() then 510 else 275 }
 		alignment: { if is_crit() then "middle center shrink-overflow" else "left shrink-overflow" }
 		z index: 2
 		font:

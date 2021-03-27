@@ -47,6 +47,10 @@ card field:
 		choice: WW2 No Repair
 		choice: Mod Repairable
 		choice: Mod No Repair
+	choice:
+		name: Platoon
+		choice: WW2
+		choice: ModernAge
 
 	description: Type
 	card list visible: true
@@ -120,6 +124,22 @@ card field:
 card field:
 	type: choice
 	name: nation icon
+	editable: false
+	choice: default
+
+card field:
+	type: choice
+	name: platoon
+	description: Platoon Icon
+	choice:
+	choice: NATO
+	choice: W-Pact
+	choice: Allies
+	choice: Axis
+
+card field:
+	type: choice
+	name: platoonicon
 	editable: false
 	choice: default
 	
@@ -287,3 +307,4 @@ card field:
 	name: copyright
 	description: Copyright
 	script: if set.copyright != "" then set.copyright else ""
+	multi line: true
