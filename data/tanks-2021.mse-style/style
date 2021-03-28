@@ -73,12 +73,14 @@ card style:
 			Aircraft Modern Helo - 2 Ammo 1 Crew: modern_helo_2ammo_1crew.png
 			Aircraft Modern Helo - 2 Ammo 2 Crew: modern_helo_2ammo_2crew.png
 			Aircraft Modern Helo - 3 Ammo 1 Crew: modern_helo_3ammo_1crew.png
-			Small Cards WW2 Ammo: small_ammo_ww2.png
 			Small Cards WW2 Upgrade: small_upgrade_ww2.png
+			Small Cards WW2 Upgrade Reveal: small_upgrade_ww2_revealed.png
 			Small Cards WW2 Crew: small_crew_ww2.png
-			Small Cards Mod Ammo: small_ammo_mod.png
+			Small Cards WW2 Crew Reveal: small_crew_ww2_revealed.png
 			Small Cards Mod Upgrade: small_upgrade_mod.png
+			Small Cards Mod Upgrade Reveal: small_upgrade_mod_revealed.png
 			Small Cards Mod Crew: small_crew_mod.png
+			Small Cards Mod Crew Reveal: small_crew_mod_revealed.png
 			Crit Cards WW2 Repairable: critcard_repair.png
 			Crit Cards WW2 No Repair: critcard.png
 			Crit Cards Mod Repairable: critcard_repair_mod.png

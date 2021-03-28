@@ -35,12 +35,14 @@ card field:
 		choice: Modern Helo - 3 Ammo 1 Crew
 	choice:
 		name: Small Cards
-		choice: WW2 Ammo
 		choice: WW2 Upgrade
+		choice: WW2 Upgrade Reveal
 		choice: WW2 Crew
-		choice: Mod Ammo
+		choice: WW2 Crew Reveal
 		choice: Mod Upgrade
+		choice: Mod Upgrade Reveal
 		choice: Mod Crew
+		choice: Mod Crew Reveal
 	choice:
 		name: Crit Cards
 		choice: WW2 Repairable
