@@ -18,6 +18,10 @@
  * WW2 and Modern Age Templates
  * Multiple additonal countries
 
+  ## 29 Mar 2021
+ * Updated Templates to fix some items
+ * Updated Fonts
+ 
  ## 26 Mar 2021
  * Updated Templates to fix some items
  * Added images of all official cards
