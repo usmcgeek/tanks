@@ -18,7 +18,13 @@
  * WW2 and Modern Age Templates
  * Multiple additonal countries
 
-  ## 29 Mar 2021
+ ## 30 Mar 2021
+ * Distressed Nation Flags for better visuals
+ * Updated Israel Expansion Playtest PDF and Cards
+ * Added Apache Attack Helo Expansion PDF and Cards
+ * Added initial Canadian Forces Expansion Tanks: Leopard C1 and Leopard C2
+
+ ## 29 Mar 2021
  * Updated Templates to fix some items
  * Updated Fonts
  
